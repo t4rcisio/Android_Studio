@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:fontFamily="@font/aclonica"
+            android:text="UMA ANÁLISE DA OFICINA DE ARDUINO NO FLISOL 2018 "
+            android:textAlignment="center"
+            android:textColor="#3F51B5"
+            android:textSize="25dp" />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_margin="25dp"
+        android:text= "Resumo:A sociedade depende cada vez mais da programação e da eletrônica. A compreensão
+do funcionamento das tecnologias embarcadas nos equipamentos que são usados no dia a dia
+é de extrema importância não somente no mundo acadêmico, mas também em situações do
+cotidiano. Pensando nisso, o Programa de Educação Tutorial da Engenharia da Computação
+(COMPET), do CEFET-MG, no âmbito do FLISoL, Festival Latino-Americano de Instalação
+de Software Livre, elaborou uma aula introdutória de programação e eletrônica para crianças
+e adolescentes da região do Campus Florestal da Universidade Federal de Viçosa, usando o
+Scratch e o Arduino Uno. O intuito da atividade foi apresentar a crianças e adolescentes
+conceitos da programação e robótica de uma maneira intuitiva e prática. Apesar dos desafios
+encontrados, como a faixa etária do público presente, abaixo do esperado, e a falta de
+equipamentos que limitaram as aulas, a metodologia se mostrou eficaz, apontando um alto
+grau de aplicabilidade a essas novas tecnologias."/>
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:layout_margin="25dp"
+            android:text="1 INTRODUÇÃO
+Sabe-se que o desenvolvimento tecnológico é um dos moldes de uma organização
+social. Para Castells (1999), a tecnologia transforma a sociedade, no modo de pensar, de
+produzir, de negociar, de comunicar, de viver, de morrer, de fazer guerra e fazer amor. Além
+disso há, segundo Resnick et al. (2009), uma falsa ideia de sabedoria na chamada “geração
+digital”, na qual sabe-se manusear as tecnologias, mas não a compreendem quanto ao seu
+funcionamento, comparando-os a alguém que saiba ler mas não consegue escrever. Assim, para
+que o indivíduo tenha a compreensão mais abrangente possível do meio em que se está inserido,
+e de forma que se possa reduzir as desigualdades no acesso a essas tecnologias, a introdução a
+esses meios deve ocorrer o mais cedo possível. “O pensamento computacional e o raciocínio
+lógico deveriam ser ensinados desde cedo, já que aumentam a capacidade de dedução e a
+
+conclusão de problemas. Tal ação tem sido incentivada pela Sociedade Brasileira de
+Computação.” (SICA, 2011, apud COSTA et al., 2016, p. 1).
+Pensado nisso e na oportunidade da realização do Festival Latino-Americano de
+Instalação de Software Livre (FLISoL), o grupo do Programa de Educação Tutorial da
+Engenharia da Computação (COMPET) do Centro Federal de Educação Tecnológica de Minas
+Gerais (CEFET-MG), gozando de suas atribuições para a elaboração e realização de programas
+voltadas para a computação, propôs uma atividade que pudesse apresentar a jovens e crianças
+como a programação e o hardware atuam nas diversas ocasiões da vida cotidiana, de forma que
+elas pudessem entender e contribuir para a construção de um projeto, através de ferramentas
+intuitivas e interativas"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoCorrect"
+            android:hint="textAutoCorrect"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textAutoComplete"
+            android:hint="textAutoComplete"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:hint="date"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:hint="number"/>
+        <EditText
+            android:id="@+id/userMail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="textPassword"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="text"
+            android:imeOptions="actionSearch"/>
+
+
+    </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>
