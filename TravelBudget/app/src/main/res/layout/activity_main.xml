@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="15dp"
+    android:layout_gravity="center"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/userDistance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:hint="@string/distance"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/distanceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:layout_gravity="center"
+            android:text="@string/total_distance" />
+
+        <EditText
+            android:id="@+id/fuelCost"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:hint="@string/fuel_cost"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/fuelCostText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="50dp"
+            android:text="@string/cost_per_litre" />
+        <EditText
+            android:id="@+id/autonomy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/aclonica"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:hint="@string/autonomy"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/autonomyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:text="@string/km_per_litre" />
+
+    </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:text="@string/total_cost"
+            android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:text="@string/r_0"
+        android:textAlignment="center"
+        android:textSize="45dp" />
+
+    <Button
+        android:id="@+id/calculeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#009688"
+        android:clickable="true"
+        android:text="@string/calcule"
+        android:textColor="@color/white"
+        android:textSize="25dp" />
+
+
+</LinearLayout>

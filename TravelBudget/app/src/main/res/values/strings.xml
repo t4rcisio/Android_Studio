@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TravelBudget</string>
+    <string name="distance">Distance</string>
+    <string name="total_distance">Total distance</string>
+    <string name="fuel_cost">Fuel Cost</string>
+    <string name="cost_per_litre">Cost per litre</string>
+    <string name="autonomy">Autonomy</string>
+    <string name="km_per_litre">km per litre</string>
+    <string name="total_cost">Total cost</string>
+    <string name="r_0">R$ 0</string>
+    <string name="calcule">Calcule</string>
+</resources>
