@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(R.layout.activity_main)
 
         calculeButton.setOnClickListener(this)
-        focusCheck(userDistance,fuelCost,autonomy,calcule_button = false)
+        focusCheck(userDistance,fuelCost,autonomy)
 
 
     }
@@ -27,28 +28,28 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-    private fun focusCheck(vararg inputBox : EditText, calcule_button : Boolean){
-        var i = 0
+
+    private fun focusCheck(vararg inputBox : EditText){
         for( box in inputBox){
             box.setOnFocusChangeListener { v, hasFocus ->
                 if(hasFocus){
                     if(checkConteten(box)){
-                        errorAlert(v,Color.BLACK)
+                        errorAlertEvent(v,Color.BLACK)
                     }else{
-                        errorAlert(v,Color.RED)
+                        errorAlertEvent(v,Color.RED)
                     }
                 }else{
                     if(checkConteten(box)){
-                        errorAlert(v,Color.BLACK)
+                        errorAlertEvent(v,Color.BLACK)
                     }else{
-                        errorAlert(v,Color.RED)
+                        errorAlertEvent(v,Color.RED)
                     }
                 }
             }
         }
     }
 
-    private fun errorAlert(view: View, color: Int){
+    private fun errorAlertEvent(view: View, color: Int){
         val id = view.id
         when(id){
             R.id.userDistance -> distanceText.setTextColor(color)
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             total.text = "R$ ${"%.2f".format(cost)}"
 
         }else{
-            focusCheck(userDistance,fuelCost,autonomy,calcule_button = true)
+            focusCheck(userDistance,fuelCost,autonomy)
         }
     }
 }
