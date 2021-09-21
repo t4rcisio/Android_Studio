@@ -29,7 +29,9 @@ class MainActivity : AppCompatActivity() {
     private fun edditTextCheck(vararg editText: EditText){
 
         for(text in editText){
-            text.addTextChangedListener(text : TextWatcher = TextWatcher())
+            text.addTextChangedListener{
+                if
+            }
         }
 
     }

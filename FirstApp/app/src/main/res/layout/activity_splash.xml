@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#9C27B0"
+    android:layout_height="match_parent"
+    tools:context=".ui.SplashActivity">
+
+    <TextView
+        android:id="@+id/getStartedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:textSize="40dp"
+        android:textColor="#fff"
+        android:text="@string/get_started"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/what_s_your_name"
+        android:imeOptions="actionGo"
+        android:inputType="text"
+        android:lines="1"
+        android:padding="15dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorHint="@color/white" />
+    <Button
+        android:id="@+id/savebutton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/button_save_style"
+        android:text="@string/salve"
+        android:textColor="#9C27B0" />
+
+
+
+</RelativeLayout>

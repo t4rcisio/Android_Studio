@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FirstApp</string>
+    <string name="get_started">Get started</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="salve">Salve</string>
+    <string name="hello_userName">Hello Tarcisio</string>
+    <string name="new_quote">New quote</string>
+</resources>
