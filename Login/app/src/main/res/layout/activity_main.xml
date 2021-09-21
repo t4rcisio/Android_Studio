@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08AD7F"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/incorrectMail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="180dp"
+        android:textColor="#BD3B3B"/>
+
+    <EditText
+        android:id="@+id/mail"
+        android:layout_below="@id/incorrectMail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/edittext_style_done"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="8dp" />
+    <TextView
+        android:id="@+id/incorrectPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mail"
+        android:layout_marginLeft="15dp"
+        android:textColor="#BD3B3B"/>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/incorrectPassword"
+        android:background="@drawable/edittext_style_done"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:inputType="textPassword"
+        android:hint="Password"
+        android:padding="8dp"/>
+
+    <Button
+        android:id="@+id/loggin"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_login_style"
+        android:hint="LOGGIN"
+        android:textColor="#0AA37D" />
+    <TextView
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/loggin"
+        android:layout_centerHorizontal="true"
+        android:background="#08AD7F"
+        android:layout_marginTop="25dp"
+        android:text="Sign up"
+        android:clickable="true"
+        android:textAllCaps="false"
+        android:textColor="#ffff" />
+
+
+</RelativeLayout>
