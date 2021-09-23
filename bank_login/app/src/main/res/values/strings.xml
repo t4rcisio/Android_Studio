@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">bank_login</string>
+    <string name="campo_obrigat_rio">Campo obrigatório</string>
+    <string name="empty"></string>
 </resources>
