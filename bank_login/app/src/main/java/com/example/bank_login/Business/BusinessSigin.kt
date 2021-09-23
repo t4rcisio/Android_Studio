@@ -13,14 +13,15 @@ class BusinessSigin {
     fun changePasswordVisibility(password: EditText, icon: ImageView, id_hidden : Int,  id_visible: Int){
         if(password.inputType == 129){
             println("Texto")
-            password.inputType = InputType.TYPE_CLASS_TEXT
+            password.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
             password.setSelection(password.length())
-            icon.setImageResource(id_hidden)
+
+            icon.setImageResource(id_visible)
         }else{
             println("Senha")
             password.inputType = 129
             password.setSelection(password.length())
-            icon.setImageResource(id_visible)
+            icon.setImageResource(id_hidden)
         }
 
     }
