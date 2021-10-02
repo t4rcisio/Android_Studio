@@ -1,113 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.RecipeActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <View
-        android:id="@+id/Recipetopbar"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="106dp"
         android:background="@drawable/recipe_topbar"
-        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_margin="15dp"
-        android:src="@drawable/ic_baseline_arrow_back_24"
-        app:layout_constraintLeft_toLeftOf="@id/Recipetopbar"
-        app:layout_constraintTop_toTopOf="@id/Recipetopbar" />
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_margin="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:src="@drawable/ic_baseline_arrow_back_24"/>
 
     <TextView
-        android:id="@+id/RecipeTitle"
+        android:id="@+id/Recipe_RecipeTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:textSize="40dp"
         android:fontFamily="cursive"
-        android:text="Cappuccino"
-        android:textColor="@color/white"
-        android:textSize="35dp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/Recipetopbar"
-        app:layout_constraintLeft_toLeftOf="@id/Recipetopbar"
-        app:layout_constraintRight_toRightOf="@id/Recipetopbar"
-        app:layout_constraintTop_toTopOf="@id/Recipetopbar" />
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/topbar"/>
+
+    <TextView
+        android:id="@+id/Recipe_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/topbar"
+        android:text="@string/author"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="cursive"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="5dp"/>
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_margin="5dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_baseline_share_24"/>
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/Recipetopbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/topbar"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent">
 
         <android.support.constraint.ConstraintLayout
-            android:id="@+id/subpage"
-            android:layout_width="wrap_content"
-            android:layout_gravity="center"
-            android:layout_height="wrap_content">
+            android:id="@+id/subParent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/Recipe_timeIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintRight_toLeftOf="@id/Recipe_favIcon"
+                app:layout_constraintTop_toTopOf="@id/subParent"
+                android:src="@drawable/ic_baseline_access_time_24"
+                android:tint="@color/mainRecipetopbar"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+
+            <ImageView
+                android:id="@+id/Recipe_favIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintTop_toTopOf="@id/Recipe_timeIcon"
+                android:src="@drawable/ic_baseline_favorite_24"
+                android:tint="@color/mainRecipetopbar"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/Recipe_timeIcon"/>
+
+            <TextView
+                android:id="@+id/Recipe_timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/time"
+                android:textStyle="bold"
+                android:fontFamily="cursive"
+                app:layout_constraintRight_toLeftOf="@id/Recipe_favText"
+                app:layout_constraintTop_toBottomOf="@id/Recipe_timeIcon"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"/>
+
+            <TextView
+                android:id="@+id/Recipe_favText"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="@string/fav"
+                android:textStyle="bold"
+                android:fontFamily="cursive"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@id/Recipe_favIcon"
+                app:layout_constraintTop_toTopOf="@id/Recipe_timeText"
+                app:layout_constraintRight_toRightOf="@id/subParent"
+                app:layout_constraintLeft_toRightOf="@id/Recipe_timeText"/>
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="300dp"
+                android:layout_height="3dp"
+                android:layout_margin="10dp"
+                android:background="@color/mainRecipetopbar"
+                app:layout_constraintTop_toBottomOf="@id/Recipe_favText"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"/>
+
+            <TextView
+                android:id="@+id/Recipe_sumarry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#C3C6C8"
+                android:fontFamily="@font/adamina"
+                android:text="@string/defaulSumary"
+                android:textStyle="italic"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"
+                app:layout_constraintTop_toBottomOf="@id/line" />
+
+            <TextView
+                android:id="@+id/ingredientsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/Recipe_sumarry"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"
+                android:text="Ingredients"
+                android:fontFamily="cursive"
+                android:textSize="25dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"/>
+            <View
+                android:id="@+id/lineIg"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-10dp"
+                android:background="@color/mainRecipetopbar"
+                app:layout_constraintTop_toBottomOf="@id/ingredientsTitle"
+                app:layout_constraintLeft_toLeftOf="@id/subParent" />
+
+            <TextView
+                android:id="@+id/Recipe_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ingredientsTitle"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"
+                android:text="@string/defaultIngredients"
+                android:fontFamily="@font/adamina"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/instructionsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/Recipe_ingredients"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="15dp"
+                android:fontFamily="cursive"
+                android:textSize="25dp"
+                android:text="Instructions"/>
+
+            <View
+                android:id="@+id/lineIn"
+                android:layout_width="150dp"
+                android:layout_height="1dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="-10dp"
+                android:background="@color/mainRecipetopbar"
+                app:layout_constraintTop_toBottomOf="@id/instructionsTitle"
+                app:layout_constraintLeft_toLeftOf="@id/subParent" />
+
+            <TextView
+                android:id="@+id/Recipe_instructions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/instructionsTitle"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"
+                android:text="@string/instructions"
+                android:fontFamily="@font/adamina"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"/>
 
 
-
-                <TextView
-                    android:id="@+id/description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="9dp"
-                    android:text="@string/defoutDescription"
-                    android:textAlignment="center"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="@id/subpage"
-                    app:layout_constraintRight_toRightOf="@id/subpage" />
-
-                <TextView
-                    android:id="@+id/ingedientsTitle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginTop="25dp"
-                    android:text="Ingredients"
-                    android:textSize="25dp"
-                    android:textStyle="bold"
-                    app:layout_constraintLeft_toLeftOf="@id/subpage"
-                    app:layout_constraintTop_toBottomOf="@id/description" />
-
-                <TextView
-                    android:id="@+id/ingredients"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="15dp"
-                    android:text="@string/ingredientsData"
-                    app:layout_constraintLeft_toLeftOf="@id/subpage"
-                    app:layout_constraintTop_toBottomOf="@id/ingedientsTitle" />
-
-
-                <TextView
-                    android:id="@+id/todoRecipe"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="15dp"
-                    android:text="@string/test"
-                    app:layout_constraintBottom_toBottomOf="@id/subpage"
-                    app:layout_constraintLeft_toLeftOf="@id/subpage"
-                    app:layout_constraintRight_toRightOf="@id/subpage"
-                    app:layout_constraintTop_toBottomOf="@id/ingredients" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="aaaaaaaaaaaaaaa\n\naaaaaaaaaaaaaaaaaaaaaaaaaa"
-                    app:layout_constraintLeft_toLeftOf="@id/subpage"
-                    app:layout_constraintTop_toBottomOf="@id/todoRecipe" />
+            <View
+                android:layout_width="100dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="30dp"
+                android:background="@color/mainRecipetopbar"
+                app:layout_constraintTop_toBottomOf="@id/Recipe_instructions"
+                app:layout_constraintLeft_toLeftOf="@id/subParent"
+                app:layout_constraintRight_toRightOf="@id/subParent"/>
 
         </android.support.constraint.ConstraintLayout>
 
 
     </ScrollView>
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>

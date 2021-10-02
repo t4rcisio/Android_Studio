@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/postFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/Main_imageRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/cappuccino_image"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+
+            <TextView
+                android:id="@+id/Main_authorTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/author"
+                app:layout_constraintTop_toTopOf="@id/Main_imageRecipe"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:padding="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/mainRecipetopbar"
+                android:textSize="15dp"
+                android:background="@color/white"
+                app:layout_constraintRight_toRightOf="parent"/>
+
+            <ImageView
+                android:id="@+id/Main_favIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:tint="@color/mainColor"
+                android:src="@drawable/ic_baseline_favorite_24"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toTopOf="@id/Main_recipeTitle"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginEnd="15dp"/>
+            <ImageView
+                android:id="@+id/Main_shareIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:tint="@color/mainColor"
+                android:src="@drawable/ic_baseline_share_24"
+                app:layout_constraintTop_toTopOf="@id/Main_favIcon"
+                app:layout_constraintRight_toLeftOf="@id/Main_favIcon"
+                android:layout_marginEnd="15dp"/>
+            <TextView
+                android:id="@+id/Main_recipeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/title"
+                android:textSize="30dp"
+                android:fontFamily="cursive"
+                app:layout_constraintTop_toBottomOf="@id/Main_imageRecipe"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="15dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/errorBox"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>

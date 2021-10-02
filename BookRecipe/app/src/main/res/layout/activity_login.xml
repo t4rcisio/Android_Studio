@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Login_Activity">
+
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.55"
+        app:layout_constraintBottom_toBottomOf="@id/Login_title"
+        android:src="@drawable/ic_baseline_restaurant_menu_24"
+        android:tint="@color/mainRecipetopbar"/>
+
+
+    <TextView
+        android:id="@+id/Login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe Book"
+        android:fontFamily="cursive"
+        android:textSize="70dp"
+        android:textAlignment="center"
+        android:textColor="@color/mainRecipetopbar"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="App"
+        android:fontFamily="cursive"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:textColor="@color/mainRecipetopbar"
+        app:layout_constraintVertical_bias="0.28"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/Login_loginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/mainRecipetopbar"
+        app:layout_constraintStart_toStartOf="@+id/Login_username"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/Login_username"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_bar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="User name"
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:textStyle="italic"
+        android:textColor="@color/mainRecipetopbar"
+        android:textSize="18dp"
+        android:textColorHint="#AFBACF"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/Login_loginText"/>
+
+    <TextView
+        android:id="@+id/Login_passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/mainRecipetopbar"
+        app:layout_constraintStart_toStartOf="@+id/Login_username"
+        app:layout_constraintTop_toBottomOf="@id/Login_username"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <EditText
+        android:id="@+id/Login_password"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circular_bar"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Password"
+        android:maxLines="1"
+        android:textStyle="italic"
+        android:textColor="@color/mainRecipetopbar"
+        android:textSize="18dp"
+        android:inputType="textPassword"
+        android:textColorHint="#AFBACF"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/Login_passwordText"/>
+
+
+    <Button
+        android:id="@+id/Login_loginButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/Login_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:background="@drawable/circular_button"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Login_loginButton"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/mainRecipetopbar"
+        android:text="Sign up"/>
+
+    <ImageView
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/ic_baseline_help_outline_24"
+        android:layout_margin="15dp"
+        android:tint="@color/mainRecipetopbar"/>
+
+
+
+</android.support.constraint.ConstraintLayout>

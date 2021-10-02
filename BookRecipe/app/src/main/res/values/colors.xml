@@ -9,4 +9,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="backgrounPastel">#FDFCE5</color>
+    <color name="mainColor">#BBDED6</color>
+    <color name="errorBox">#fef0ed</color>
+    <color name="login_input_color_background">#f5f6fa</color>
 </resources>
