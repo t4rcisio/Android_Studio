@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".view.GuestForm">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Guest"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:textStyle="italic"
+        android:padding="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="Name:"/>
+    <EditText
+        android:id="@+id/form_guest_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toBottomOf="@id/text_name"/>
+
+
+    <TextView
+        android:id="@+id/text_gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/form_guest_name"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="Gender:"/>
+    <RadioGroup
+        android:id="@+id/formGender"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/text_gender"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/form_guest_age"
+        android:background="@drawable/form_radiosbutton_style"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/form_guest_male"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="Male"/>
+        <RadioButton
+            android:id="@+id/form_guest_female"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content"
+            android:text="Female"/>
+        <RadioButton
+            android:id="@+id/form_guest_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other"/>
+
+    </RadioGroup>
+
+
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_gender"
+        app:layout_constraintLeft_toLeftOf="@id/form_guest_age"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="Age:"/>
+    <EditText
+        android:id="@+id/form_guest_age"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/formGender"
+        app:layout_constraintRight_toRightOf="parent"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:inputType="number"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toBottomOf="@id/text_age"/>
+
+    <TextView
+        android:id="@+id/text_cpf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/formGender"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="CPF:"/>
+    <EditText
+        android:id="@+id/form_guest_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:inputType="number"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toBottomOf="@id/text_cpf"/>
+
+    <TextView
+        android:id="@+id/text_Address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/form_guest_id"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="Address:"/>
+    <EditText
+        android:id="@+id/form_guest_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:inputType="textPostalAddress"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toBottomOf="@id/text_Address"/>
+
+    <TextView
+        android:id="@+id/text_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/form_guest_address"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="City:"/>
+
+    <EditText
+        android:id="@+id/form_guest_city"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:inputType="textAutoComplete"
+        app:layout_constraintRight_toLeftOf="@id/form_guest_zipcode"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toBottomOf="@id/text_city"/>
+
+    <TextView
+        android:id="@+id/text_zipcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/text_city"
+        app:layout_constraintLeft_toLeftOf="@id/form_guest_zipcode"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="ZipCode:"/>
+    <EditText
+        android:id="@+id/form_guest_zipcode"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/form_guest_city"
+        android:padding="10dp"
+        android:inputType="number"
+        android:maxLines="1"
+        android:layout_marginStart="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toTopOf="@id/form_guest_city"/>
+
+
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/form_guest_city"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textStyle="italic"
+        android:textSize="18dp"
+        android:text="Phone:"/>
+    <EditText
+        android:id="@+id/form_guest_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:padding="10dp"
+        android:maxLines="1"
+        android:background="@drawable/form_edititext_style"
+        app:layout_constraintTop_toBottomOf="@id/text_phone"/>
+
+
+
+
+    <RadioGroup
+        android:id="@+id/form_guest_confirmation_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:paddingRight="10dp"
+        android:background="@drawable/form_radiosbutton_style"
+        app:layout_constraintTop_toBottomOf="@id/form_guest_phone"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <RadioButton
+            android:id="@+id/form_guest_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I confirm my attendance"/>
+        <RadioButton
+            android:id="@+id/form_guest_dont_confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I don't confirm my attendance"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/form_confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:text="Save"
+        android:background="@drawable/form_edititext_style"
+        />
+
+    <View
+        android:id="@+id/editBackground"
+        android:layout_width="50dp"
+        android:layout_height="90dp"
+        app:layout_constraintBottom_toBottomOf="@id/form_confirm_button"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ImageView
+        android:id="@+id/editGuest"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintTop_toTopOf="@id/editBackground"
+        app:layout_constraintRight_toRightOf="@id/editBackground"
+        app:layout_constraintLeft_toLeftOf="@id/editBackground" />
+
+    <ImageView
+        android:id="@+id/deleteGuest"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_baseline_delete_forever_24"
+        app:layout_constraintBottom_toBottomOf="@id/editBackground"
+        app:layout_constraintRight_toRightOf="@id/editBackground"
+        app:layout_constraintLeft_toLeftOf="@id/editBackground"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

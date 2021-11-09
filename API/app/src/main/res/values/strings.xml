@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">API_teste</string>
+    <string name="sucesfull">Successful to get data</string>
+</resources>
